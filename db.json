@@ -1,0 +1,101 @@
+{
+  "catalogue": [
+    {
+      "id": 1,
+      "productName": "Watch 1",
+      "productImage": "watch1.jpg",
+      "productPrice": 100,
+      "productStock": 50
+    },
+    {
+      "id": 2,
+      "productName": "Watch 2",
+      "productImage": "watch2.jpg",
+      "productPrice": 120,
+      "productStock": 100
+    },
+    {
+      "id": 3,
+      "productName": "Watch 3",
+      "productImage": "watch3.jpg",
+      "productPrice": 90,
+      "productStock": 75
+    },
+    {
+      "id": 4,
+      "productName": "Watch 4",
+      "productImage": "watch4.jpg",
+      "productPrice": 75,
+      "productStock": 60
+    },
+    {
+      "id": 5,
+      "productName": "Watch 5",
+      "productImage": "watch5.jpg",
+      "productPrice": 50,
+      "productStock": 20
+    },
+    {
+      "id": 6,
+      "productName": "Watch 6",
+      "productImage": "watch6.jpg",
+      "productPrice": 70,
+      "productStock": 30
+    },
+    {
+      "id": 7,
+      "productName": "Watch 7",
+      "productImage": "Watch7.jpg",
+      "productPrice": 65,
+      "productStock": 55
+    },
+    {
+      "id": 8,
+      "productName": "Watch 8",
+      "productImage": "Watch8.jpg",
+      "productPrice": 60,
+      "productStock": 60
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "productName": "Watch 1",
+      "productImage": "watch1.jpg",
+      "productPrice": 100,
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "productName": "Watch 3",
+      "productImage": "watch3.jpg",
+      "productPrice": 90,
+      "quantity": 2
+    }
+  ],
+  "orderDetails": {
+    "id": 1,
+    "custLastName": "Morrison",
+    "custFirstName": "John",
+    "custAddress": "xyz street",
+    "custCart": [
+      {
+        "id": 1,
+        "productName": "Watch 1",
+        "productImage": "watch1.jpg",
+        "productPrice": 100,
+        "quantity": 1
+      },
+      {
+        "id": 2,
+        "productName": "Watch 3",
+        "productImage": "watch3.jpg",
+        "productPrice": 90,
+        "quantity": 2
+      }
+    ],
+    "custCartTotal": 280,
+    "custCreditCard": "5555555555554444"
+  },
+  "orders": []
+}
