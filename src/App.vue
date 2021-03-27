@@ -18,9 +18,33 @@ export default {
 </script>
 
 <style lang="scss">
+// UNIVERSAL SETTINGS
+
+// color palette
+// rustic palette
+$r1-color1: #3d5a80;
+$r1-color2: #98c1d9;
+$r1-color3: #e0fbfc;
+$r1-color4: #ee6c4d;
+$r1-color5: #293241;
+$r1-color6: #c4979f;
+
+// rustic 2 pallete
+$r2-color1: #3a445d;
+$r2-color2: #9ad18b;
+$r2-color3: #deca8b;
+$r2-color4: #b05736;
+$r2-color5: #313232;
+$r2-color6: #7b5d8d;
+
 // global variables
-$bgColor: #333;
+$bgColor: $r2-color1;
 $fgColor: #fff;
+
+// custom pallete bootstrap
+.bg-rustic {
+  background-color: $r1-color6;
+}
 
 // global fonts
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@600;700&family=Noto+Serif+JP:wght@200;300;400&family=Raleway:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap");

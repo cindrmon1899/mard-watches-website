@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <b-navbar toggleable="md" type="dark" variant="dark" sticky>
+    <b-navbar toggleable="md" type="dark" variant="rustic" sticky>
       <!-- Navbar Brand/Logo/Company Name -->
       <b-navbar-brand to="/"> Mard Watches </b-navbar-brand>
 
@@ -26,3 +26,5 @@
     <!-- TODO: insert cart Modal here through component -->
   </div>
 </template>
+
+<style lang="scss" scoped></style>
