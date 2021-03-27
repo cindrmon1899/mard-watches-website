@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <b-navbar toggleable="md" type="dark" variant="rustic" sticky>
+    <b-navbar toggleable="md" type="dark" variant="rustic" fixed="top">
       <!-- Navbar Brand/Logo/Company Name -->
       <b-navbar-brand to="/"> Mard Watches </b-navbar-brand>
 

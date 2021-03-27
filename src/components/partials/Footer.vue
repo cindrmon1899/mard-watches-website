@@ -6,7 +6,11 @@
       <span style="display: inline-block; transform: rotate(180deg)"
         >&#169;</span
       >
-      cindrmon 2021
+      cindrmon 2021; Photos by
+      <a
+        href="https://unsplash.com/collections/27237890/for-fake-watch-company-(mard-watches)"
+        >Unsplash.com</a
+      >
     </div>
   </footer>
 </template>

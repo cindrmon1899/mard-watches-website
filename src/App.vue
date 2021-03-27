@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="flex-wrapper">
+  <div id="app" class="position-relative">
     <Navbar />
     <router-view />
     <Footer />
@@ -80,14 +80,12 @@ p,
 footer {
   font-family: "Noto Serif JP", serif;
 }
-
-.flex-wrapper {
+#app {
+  // flex wrapper
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
-}
-#app {
   background-color: $bgColor;
   .container,
   footer {
