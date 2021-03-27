@@ -9,6 +9,12 @@ export default {
   name: "Catalogue",
   metaInfo: {
     title: "Our Watches",
+    meta: [
+      {
+        name: "description",
+        content: "Check out our watch collection!",
+      },
+    ],
   },
 };
 </script>

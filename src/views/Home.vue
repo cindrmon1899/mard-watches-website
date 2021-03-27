@@ -9,7 +9,7 @@ export default {
   name: "Home",
   metaInfo: {
     title: "Home",
-    desc: "Welcome to Mard Watches!",
+    meta: [{ name: "description", content: "Welcome to Mard Watches!" }],
   },
 };
 </script>

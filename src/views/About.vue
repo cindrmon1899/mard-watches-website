@@ -13,6 +13,13 @@ export default {
   name: "About",
   metaInfo: {
     title: "About",
+    meta: [
+      {
+        name: "description",
+        content:
+          "Know more about our company and why we make such bold claims with our watches.",
+      },
+    ],
   },
 };
 </script>
