@@ -11,8 +11,8 @@
       <b-collapse id="nav-collapse" is-nav>
         <!-- Items on the Left -->
         <b-navbar-nav>
-          <b-nav-item to="/catalogue">Catalogue</b-nav-item>
           <b-nav-item to="/about">About</b-nav-item>
+          <b-nav-item to="/catalogue">Catalogue</b-nav-item>
         </b-navbar-nav>
 
         <!-- Items on the Right -->

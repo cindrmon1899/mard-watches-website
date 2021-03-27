@@ -10,6 +10,11 @@
 import Navbar from "@/components/partials/Navbar";
 import Footer from "@/components/partials/Footer";
 export default {
+  name: "App",
+  metaInfo: {
+    title: "Mard Watches",
+    titleTemplate: "%s | Mard Watches",
+  },
   components: {
     Navbar,
     Footer,
