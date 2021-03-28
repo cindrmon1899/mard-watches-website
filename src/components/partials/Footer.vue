@@ -21,16 +21,17 @@ hr {
 }
 footer {
   flex-shrink: 0;
-}
-.footer-link {
-  color: #fff;
-  font-family: sans-serif;
-  text-decoration: none;
-}
-.footer-link:hover {
-  color: #bbbb03;
-}
-.footer-link:visited {
-  color: #8bff8b;
+  // footer links
+  a {
+    color: #fff;
+    font-family: sans-serif;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #bbbb03;
+  }
+  a:visited {
+    color: #8bff8b;
+  }
 }
 </style>

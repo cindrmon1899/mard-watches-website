@@ -14,10 +14,8 @@ module.exports = {
       .rule("vue")
       .use("vue-loader")
       .loader("vue-loader")
-      .options({
-        transformAssetUrls: {
-          video: ["src", "poster"],
-          source: "src",
+      .tap((options) => {
+        options.transformAssetUrls = {
           img: "src",
           image: "xlink:href",
           "b-avatar": "src",
@@ -28,7 +26,9 @@ module.exports = {
           "b-card-img-lazy": ["src", "blank-src"],
           "b-carousel-slide": "img-src",
           "b-embed": "src",
-        },
+        };
+
+        return options;
       });
   },
 };
