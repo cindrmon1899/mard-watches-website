@@ -14,7 +14,8 @@
     "json-server": "^0.16.3",
     "vue": "^2.6.11",
     "vue-meta": "^2.4.0",
-    "vue-router": "^3.2.0"
+    "vue-router": "^3.2.0",
+    "vue-screen-size": "^1.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
