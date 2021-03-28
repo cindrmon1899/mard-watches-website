@@ -61,9 +61,10 @@ npm install
 ```
 
 ### Compiles and hot-reloads for development
+> NOTE: Please run them both, as I have made a fake API that handles all the data in this project.
 ```
 npm run serve // runs the main vue app
-npm run json-server // runs the fake json api that is included with this repo
+npm run json-server // runs the fake json api that is included with this repo (must also run alongside the app)
 ```
 
 ### Compiles and minifies for production
