@@ -1,6 +1,6 @@
 <template>
-  <div class="about container position-relative">
-    <h1 class="about-header">About Us</h1>
+  <div id="about" class="container position-relative">
+    <h1 class="page-header">About Us</h1>
     <AboutBlock
       type="A"
       title="We are simple"
@@ -41,11 +41,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.about-header {
-  font-size: 5rem;
-  padding: 1rem 0;
-  margin: 1rem 0;
-}
-</style>

@@ -2,73 +2,73 @@
   "catalogue": [
     {
       "id": 1,
-      "productName": "Watch 1",
-      "productImage": "watch1.jpg",
-      "productPrice": 100,
+      "productName": "Big Boi Black",
+      "productImage": "watch1.png",
+      "productPrice": 640,
       "productStock": 50
     },
     {
       "id": 2,
-      "productName": "Watch 2",
-      "productImage": "watch2.jpg",
-      "productPrice": 120,
+      "productName": "Bold Gold",
+      "productImage": "watch2.png",
+      "productPrice": 365,
       "productStock": 100
     },
     {
       "id": 3,
-      "productName": "Watch 3",
-      "productImage": "watch3.jpg",
-      "productPrice": 90,
+      "productName": "Sweater Leather",
+      "productImage": "watch3.png",
+      "productPrice": 730,
       "productStock": 75
     },
     {
       "id": 4,
-      "productName": "Watch 4",
-      "productImage": "watch4.jpg",
-      "productPrice": 75,
+      "productName": "Blue Pop",
+      "productImage": "watch4.png",
+      "productPrice": 450,
       "productStock": 60
     },
     {
       "id": 5,
-      "productName": "Watch 5",
-      "productImage": "watch5.jpg",
-      "productPrice": 50,
+      "productName": "Bold Gold Black",
+      "productImage": "watch5.png",
+      "productPrice": 1005,
       "productStock": 20
     },
     {
       "id": 6,
-      "productName": "Watch 6",
-      "productImage": "watch6.jpg",
-      "productPrice": 70,
+      "productName": "Movement, but not really",
+      "productImage": "watch6.png",
+      "productPrice": 274,
       "productStock": 30
     },
     {
       "id": 7,
-      "productName": "Watch 7",
-      "productImage": "Watch7.jpg",
-      "productPrice": 65,
-      "productStock": 55
+      "productName": "Eat the Rich",
+      "productImage": "watch7.png",
+      "productPrice": 1370,
+      "productStock": 10
     },
     {
       "id": 8,
-      "productName": "Watch 8",
-      "productImage": "Watch8.jpg",
-      "productPrice": 60,
-      "productStock": 60
+      "productName": "U Basic",
+      "productImage": "watch8.png",
+      "productPrice": 182,
+      "productStock": 40
     }
   ],
   "cart": [
     {
       "id": 1,
       "productName": "Watch 1",
-      "productImage": "watch1.jpg",
+      "productImage": "watch1.png",
       "productPrice": 100,
       "quantity": 1
     },
     {
       "id": 2,
       "productName": "Watch 3",
-      "productImage": "watch3.jpg",
+      "productImage": "watch3.png",
       "productPrice": 90,
       "quantity": 2
     }
@@ -82,14 +82,14 @@
       {
         "id": 1,
         "productName": "Watch 1",
-        "productImage": "watch1.jpg",
+        "productImage": "watch1.png",
         "productPrice": 100,
         "quantity": 1
       },
       {
         "id": 2,
         "productName": "Watch 3",
-        "productImage": "watch3.jpg",
+        "productImage": "watch3.png",
         "productPrice": 90,
         "quantity": 2
       }

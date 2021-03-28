@@ -1,8 +1,5 @@
 <template>
-  <div class="about-block container-fluid">
-    <b-row>
-      <h2>{{ this.title }}</h2>
-    </b-row>
+  <div id="aboutBlock" class="container-fluid">
     <div class="row" v-show="isTypeA && !isScreenMobile">
       <b-col md="4">
         <b-img
@@ -11,12 +8,22 @@
         ></b-img>
       </b-col>
       <b-col md="8">
-        <p>{{ this.content }}</p>
+        <b-row>
+          <h2>{{ this.title }}</h2>
+        </b-row>
+        <b-row>
+          <p>{{ this.content }}</p>
+        </b-row>
       </b-col>
     </div>
     <div class="row" v-show="isTypeB && !isScreenMobile">
       <b-col md="8">
-        <p>{{ this.content }}</p>
+        <b-row>
+          <h2>{{ this.title }}</h2>
+        </b-row>
+        <b-row>
+          <p>{{ this.content }}</p>
+        </b-row>
       </b-col>
       <b-col md="4">
         <b-img
@@ -33,7 +40,12 @@
         ></b-img>
       </b-col>
       <b-col sm="12">
-        <p>{{ this.content }}</p>
+        <b-row>
+          <h2>{{ this.title }}</h2>
+        </b-row>
+        <b-row>
+          <p>{{ this.content }}</p>
+        </b-row>
       </b-col>
     </div>
   </div>
@@ -74,7 +86,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.about-block {
+#aboutBlock {
   margin: 3rem 0;
   padding: 1rem;
   background-color: #3d5a8070;

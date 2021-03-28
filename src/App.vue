@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="position-relative">
     <Navbar />
-    <router-view />
+    <router-view :watchCatalogue="watchCatalogue" />
     <Footer />
   </div>
 </template>
@@ -18,6 +18,25 @@ export default {
   components: {
     Navbar,
     Footer,
+  },
+  data() {
+    return {
+      watchCatalogue: [],
+    };
+  },
+  methods: {
+    // READ INSTRUCTIONS FROM FAKE API ////////////////
+    async fetchCatalogue() {
+      const res = await fetch("api/catalogue");
+      const data = await res.json();
+
+      return data;
+    },
+    ///////////////////////////////////////////////////
+  },
+  async created() {
+    this.watchCatalogue = await this.fetchCatalogue();
+    console.log(this.watchCatalogue);
   },
 };
 </script>
@@ -80,6 +99,14 @@ p,
 footer {
   font-family: "Noto Serif JP", serif;
 }
+
+// PAGE HEADERS
+.page-header {
+  font-size: 5rem;
+  padding: 1rem 0;
+  margin: 1rem 0;
+}
+
 #app {
   // flex wrapper
   display: flex;
@@ -88,6 +115,7 @@ footer {
   justify-content: space-between;
   background-color: $bgColor;
   .container,
+  .container-fluid,
   footer {
     color: $fgColor;
   }
