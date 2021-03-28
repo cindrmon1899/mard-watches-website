@@ -76,11 +76,13 @@ export default {
 <style lang="scss" scoped>
 .about-block {
   margin: 3rem 0;
-
+  padding: 1rem;
+  background-color: #3d5a8070;
   // block header
   h2 {
     font-size: 36pt;
     margin: 2rem 0;
+    padding: 1rem;
     // block header (this manual override only applies for smaller screens)
     @media only screen and (max-width: 768px) {
       margin-left: auto;
