@@ -8,22 +8,16 @@
       indicators
       background="#ababab"
       img-width="1024"
-      img-height="480"
+      img-height="700"
       style="text-shadow: 1px 1px 2px #333"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-      <!-- Text slides with image -->
-      <!-- <b-carousel-slide
-        caption="First slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="@/assets/images/home/home1.jpg"
-      ></b-carousel-slide> -->
-
       <b-carousel-slide
         caption="Welcome to Mard Watches"
         text="A small watch company with lots of potential."
         img-src="@/assets/images/home/home1.jpg"
+        class="ad-hoc"
       ></b-carousel-slide>
 
       <b-carousel-slide
@@ -59,24 +53,6 @@ export default {
           "Welcome to Mard Watches! | A small watch company with lots of potential.",
       },
     ],
-  },
-  data() {
-    return {
-      // for carousel
-      slide: 0,
-      sliding: null,
-      // insert other data starting from below here
-    };
-  },
-  methods: {
-    // for carousel
-    onSlideStart() {
-      this.sliding = true;
-    },
-    onSLideEnd() {
-      this.sliding = false;
-    },
-    // insert other data starting from below here
   },
 };
 </script>

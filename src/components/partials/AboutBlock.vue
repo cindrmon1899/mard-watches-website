@@ -1,9 +1,11 @@
 <template>
   <div id="aboutBlock" class="container-fluid">
     <div class="row" v-show="isTypeA && !isScreenMobile">
-      <b-col md="4">
+      <b-col md="4" class="my-auto">
         <b-img
           fluid
+          rounded
+          center
           :src="require(`@/assets/images/about/${this.image}`)"
         ></b-img>
       </b-col>
@@ -25,17 +27,21 @@
           <p>{{ this.content }}</p>
         </b-row>
       </b-col>
-      <b-col md="4">
+      <b-col md="4" class="my-auto">
         <b-img
           fluid
+          rounded
+          center
           :src="require(`@/assets/images/about/${this.image}`)"
         ></b-img>
       </b-col>
     </div>
     <div class="row" v-show="isScreenMobile">
-      <b-col sm="12">
+      <b-col sm="12" class="my-auto">
         <b-img
           fluid
+          rounded
+          center
           :src="require(`@/assets/images/about/${this.image}`)"
         ></b-img>
       </b-col>
@@ -86,10 +92,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// scoped variables
+$radiusSize: 1.25rem;
+
+// mixins
+@mixin customBoxShadow {
+  box-shadow: 1px 1px 1px black;
+}
+
 #aboutBlock {
   margin: 3rem 0;
-  padding: 1rem;
+  padding: 1.25rem;
+  border-radius: $radiusSize;
   background-color: #3d5a8070;
+
+  // shadow
+  @include customBoxShadow;
+
   // block header
   h2 {
     font-size: 36pt;
@@ -105,6 +124,18 @@ export default {
   // block content (this manual override only applies for smaller screens)
   .col-sm-12 {
     margin: 1.5rem 0;
+  }
+
+  // paragraph padding
+  p {
+    padding: 0 1.5rem;
+    text-align: justify;
+  }
+
+  // border-radius for built-in rounded is too small
+  .rounded {
+    border-radius: $radiusSize !important;
+    @include customBoxShadow;
   }
 }
 </style>
