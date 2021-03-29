@@ -1,25 +1,40 @@
 <template>
-  <div class="catalogue container-fluid">
+  <div class="catalogue container">
     <h1 class="page-header">Our Watches</h1>
     <b-card-group deck>
-      <Product
-        v-for="item in watchCatalogue"
-        :key="item.id"
-        :name="item.productName"
-        :price="item.productPrice"
-        :image="item.productImage"
-      />
+      <b-card
+        v-for="product in watchCatalogue"
+        :key="product.id"
+        no-body
+        :img-src="require(`@/assets/images/catalogue/${product.productImage}`)"
+        :img-alt="image"
+        img-top
+        bg-variant="dark"
+        text-variant="white"
+        class="text-center"
+        style="max-width: 33.33%"
+      >
+        <b-card-body>
+          <b-card-title>
+            {{ product.productName }}
+          </b-card-title>
+          <b-card-sub-title class="mb-2">
+            XRP {{ product.productPrice }}
+          </b-card-sub-title>
+        </b-card-body>
+
+        <b-card-footer>
+          <b-button type="secondary"> Learn More </b-button>
+          <b-button type="primary"> Add To Cart </b-button>
+        </b-card-footer>
+      </b-card>
     </b-card-group>
   </div>
 </template>
 
 <script>
-import Product from "@/components/partials/Product";
 export default {
   name: "Catalogue",
-  components: {
-    Product,
-  },
   metaInfo: {
     title: "Our Watches",
     meta: [

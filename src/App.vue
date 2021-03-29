@@ -32,6 +32,12 @@ export default {
 
       return data;
     },
+    async fetchProduct(id) {
+      const res = await fetch(`api/catalogue/${id}`);
+      const data = await res.json();
+
+      return data;
+    },
     ///////////////////////////////////////////////////
   },
   async created() {
