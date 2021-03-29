@@ -112,6 +112,12 @@ footer {
   padding: 1rem 0;
   margin: 1rem 0;
 }
+@media only screen and (max-width: 768px) {
+  .page-header {
+    font-size: 4rem;
+    margin: 1rem auto;
+  }
+}
 
 #app {
   // flex wrapper

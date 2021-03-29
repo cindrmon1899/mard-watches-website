@@ -1,6 +1,8 @@
 <template>
   <div id="about" class="container position-relative">
-    <h1 class="page-header">About Us</h1>
+    <b-row>
+      <h1 class="page-header">About Us</h1>
+    </b-row>
     <AboutBlock
       type="A"
       title="We are simple"
