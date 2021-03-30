@@ -55,16 +55,14 @@ It should output the version number of vue. The following is an example:
 > You can now follow the next steps to setup this project by yourself.
 
 ## Project setup 
-**NOTE: Change directory first throught the cmd or terminal to the project location before running npm install, so that it would install the appropriate node modules for this project.**
+**NOTE: Change directory first through the cmd or terminal to the project location before running npm install, so that it would install the appropriate node modules for this project.**
 ```
 npm install
 ```
 
 ### Compiles and hot-reloads for development
-> NOTE: Please run them both, as I have made a fake API that handles all the data in this project.
 ```
-npm run serve // runs the main vue app
-npm run json-server // runs the fake json api that is included with this repo (must also run alongside the app)
+npm run serve // already runs the vue app and the fake json-server api simultaneously, so just type this command.
 ```
 
 ### Compiles and minifies for production

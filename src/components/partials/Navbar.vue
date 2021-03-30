@@ -1,5 +1,6 @@
 <template>
   <div id="nav" class="sticky-top">
+    <!-- Main Navbar -->
     <b-navbar toggleable="md" type="dark" variant="rustic">
       <!-- Navbar Brand/Logo/Company Name -->
       <b-navbar-brand to="/"> Mard Watches </b-navbar-brand>
@@ -17,14 +18,29 @@
 
         <!-- Items on the Right -->
         <b-navbar-nav class="ml-auto">
-          <b-nav-item>
+          <b-nav-item @click="showCart()">
             <b-icon-cart-fill></b-icon-cart-fill> Cart (0)
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
-    <!-- TODO: insert cart Modal here through component -->
+    <!-- Cart Modal -->
+    <Cart ref="modalComponent" />
   </div>
 </template>
+
+<script>
+import Cart from "@/components/modals/Cart";
+export default {
+  components: {
+    Cart,
+  },
+  methods: {
+    showCart() {
+      this.$refs.modalComponent.show();
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped></style>

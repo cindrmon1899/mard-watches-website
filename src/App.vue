@@ -22,10 +22,12 @@ export default {
   data() {
     return {
       watchCatalogue: [],
+      cart: [],
     };
   },
   methods: {
     // READ INSTRUCTIONS FROM FAKE API ////////////////
+    // ^/api/catalogue
     async fetchCatalogue() {
       const res = await fetch("api/catalogue");
       const data = await res.json();
@@ -38,11 +40,26 @@ export default {
 
       return data;
     },
+    // ^/api/cart
+    async fetchCart() {
+      const res = await fetch("api/cart");
+      const data = await res.json();
+
+      return data;
+    },
+    async fetchCartItem(id) {
+      const res = await fetch(`api/cart/${id}`);
+      const data = await res.json();
+
+      return data;
+    },
     ///////////////////////////////////////////////////
   },
   async created() {
     this.watchCatalogue = await this.fetchCatalogue();
-    console.log(this.watchCatalogue);
+    // console.log(this.watchCatalogue);
+    this.cart = await this.fetchCart();
+    console.log(this.cart);
   },
 };
 </script>

@@ -25,7 +25,6 @@
             </b-card-sub-title>
           </b-card-body>
           <b-card-footer>
-            <b-button type="secondary">Learn More</b-button>
             <b-button type="primary">Add to Cart</b-button>
           </b-card-footer>
         </b-card>

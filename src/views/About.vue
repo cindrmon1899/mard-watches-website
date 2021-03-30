@@ -11,7 +11,7 @@
     />
     <AboutBlock
       type="B"
-      title="We are small"
+      title="We may be small..."
       content="Mard watches started out as two broke college kids who wanted to wear stylish watches, but couldn't afford them. So, in theory, we made our own watch company. Now, we're still relatively small, yet we grew significantly, with around 20 employees who are working their very hardest to provide you the best watches this dang company will give you. Just because we're small doesn't mean we don't stop making quality watches, it means that we are fuelled by passion to provide you the best of the best in the market."
       image="about2.jpg"
     />
