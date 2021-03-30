@@ -95,7 +95,7 @@
       }
     ],
     "custCartTotal": 280,
-    "custCreditCard": "5555555555554444"
+    "custRippleAddress": "5555555555554444"
   },
   "orders": []
 }
