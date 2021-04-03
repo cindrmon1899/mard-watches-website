@@ -1,0 +1,18 @@
+{
+    "cart": [
+    {
+      "id": 1,
+      "productName": "Watch 1",
+      "productImage": "watch1.png",
+      "productPrice": 100,
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "productName": "Watch 3",
+      "productImage": "watch3.png",
+      "productPrice": 90,
+      "quantity": 2
+    }
+    ]
+}

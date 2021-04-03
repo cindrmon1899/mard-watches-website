@@ -1,7 +1,13 @@
 <template>
   <div id="app" class="position-relative">
     <Navbar />
-    <router-view :watchCatalogue="watchCatalogue" />
+    <router-view
+      :watchCatalogue="watchCatalogue"
+      :cart="cart"
+      @added-to-cart-button="addedToCartBtn"
+      @add-to-cart="addToCart"
+      @update-catalogue-when-item-add="addToCartUpdateCatalogue"
+    />
     <Footer />
   </div>
 </template>
@@ -26,6 +32,25 @@ export default {
     };
   },
   methods: {
+    // ADD ITEM TO CART FROM FAKE API /////////////////
+    async addToCart(product) {
+      const res = await fetch("api/cart", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(product),
+      });
+
+      const data = await res.json();
+
+      if (this.cart.filter((cartItem) => cartItem.id !== product.id)) {
+        this.cart.push(data);
+      }
+    },
+
+    ///////////////////////////////////////////////////
+
     // READ INSTRUCTIONS FROM FAKE API ////////////////
     // ^/api/catalogue
     async fetchCatalogue() {
@@ -54,12 +79,65 @@ export default {
       return data;
     },
     ///////////////////////////////////////////////////
+
+    // UPDATE INSTRUCTIONS FROM FAKE API //////////////
+    // ^/api/cart
+    async addedToCartBtn(id) {
+      const cartButton = await this.fetchProduct(id);
+      const updateCartButton = { ...cartButton, isAddedToCart: true };
+
+      console.log(updateCartButton);
+
+      const res = await fetch(`api/catalogue/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(updateCartButton),
+      });
+
+      const data = await res.json();
+
+      this.watchCatalogue = this.watchCatalogue.map((item) =>
+        item.id ? { ...item, isAddedToCart: data.isAddedToCart } : item
+      );
+    },
+
+    async addToCartUpdateCatalogue(product) {
+      const catalogueItem = this.fetchProduct(product.id);
+      const updateCatalogueItem = {
+        ...catalogueItem,
+        productStock: --catalogueItem.productStock,
+        quantityOrdered: ++catalogueItem.quantityOrdered,
+      };
+
+      const res = await fetch(`api/catalogue/${product.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-type": "application/json",
+          body: JSON.stringify(updateCatalogueItem),
+        },
+      });
+
+      const data = await res.json();
+
+      this.watchCatalogue = this.watchCatalogue.map((item) =>
+        item.id
+          ? {
+              ...item,
+              productStock: data.productStock,
+              quantityOrdered: data.quantityOrdered,
+            }
+          : item
+      );
+    },
+    ///////////////////////////////////////////////////
   },
   async created() {
     this.watchCatalogue = await this.fetchCatalogue();
     // console.log(this.watchCatalogue);
     this.cart = await this.fetchCart();
-    console.log(this.cart);
+    // console.log(this.cart);
   },
 };
 </script>

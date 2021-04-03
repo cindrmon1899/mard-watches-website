@@ -9,11 +9,17 @@ export default {
   name: "Cart",
   data() {
     return {
-      // insert vue component local data here
+      catalogueItems: [],
+      cartItems: [],
+      cartItemsToRemove: [],
     };
   },
   props: {
-    // insert vue parent data here (remove if unnecessary)
+    catalogueData: {
+      type: Array,
+      required: true,
+    },
+    cartData: { type: Array, required: true },
   },
   methods: {
     show() {
@@ -25,9 +31,6 @@ export default {
   },
   watch: {
     // insert local component watchers here (remove if unnecessary)
-  },
-  created: {
-    // insert local component initialisers here (remove if unnecessary)
   },
 };
 </script>

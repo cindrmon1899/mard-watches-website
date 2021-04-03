@@ -10,7 +10,7 @@
           :img-src="
             require(`@/assets/images/catalogue/${product.productImage}`)
           "
-          :img-alt="image"
+          :img-alt="product.productImage"
           img-top
           bg-variant="dark"
           text-variant="white"
@@ -25,7 +25,12 @@
             </b-card-sub-title>
           </b-card-body>
           <b-card-footer>
-            <b-button type="primary">Add to Cart</b-button>
+            <b-button
+              type="primary"
+              :id="`watch_${product.id}_cartButton`"
+              @click="addItemToCart(product)"
+              >Add to Cart</b-button
+            >
           </b-card-footer>
         </b-card>
       </b-col>
@@ -47,6 +52,23 @@ export default {
   },
   props: {
     watchCatalogue: Array,
+  },
+  methods: {
+    async addItemToCart(item) {
+      console.log(item);
+      console.log(item.id);
+      console.log(item.isAddedToCart);
+      ++item.quantityOrdered;
+      --item.productStock;
+      // this will disable the add to cart button
+      // when it is already added to cart
+      this.$emit("add-to-cart", item);
+      this.$emit("added-to-cart-button", item.id);
+      this.$emit("update-catalogue-when-item-add", item);
+      let buttonId = eval(`watch_${item.id}_cartButton`);
+      buttonId.innerText = "Added";
+      buttonId.classList.add("disabled");
+    },
   },
 };
 </script>
