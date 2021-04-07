@@ -19,7 +19,9 @@
         <!-- Items on the Right -->
         <b-navbar-nav class="ml-auto">
           <b-nav-item @click="showCart()">
-            <b-icon-cart-fill></b-icon-cart-fill> Cart (0)
+            <b-icon-cart-fill></b-icon-cart-fill> Cart ({{
+              totalNumberOfItems
+            }})
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>

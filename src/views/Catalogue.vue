@@ -114,18 +114,16 @@ export default {
   },
   methods: {
     async addItemToCart(item) {
-      let selectedMovie = {
+      let selectedItem = {
         id: item.id,
         name: item.productName,
         price: item.productPrice,
         quantity: 1,
       };
-      if (!item.isAddedToCart) {
-        this.$emit("send-cart-data", selectedMovie);
-        let buttonId = eval(`watch_${item.id}_cartButton`);
-        buttonId.innerText = "Added";
-        buttonId.classList.add("disabled");
-      }
+      this.$emit("send-cart-data", selectedItem);
+      let buttonId = eval(`watch_${item.id}_cartButton`);
+      buttonId.innerText = "Added";
+      buttonId.classList.add("disabled");
     },
   },
 };

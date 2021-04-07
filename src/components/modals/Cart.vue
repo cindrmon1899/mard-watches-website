@@ -122,7 +122,13 @@ export default {
       this.selected = checked ? this.possibleCartItems.slice() : [];
     },
     deleteSelectedData() {
+      this.selected.forEach((id) => {
+        let buttonId = eval(`watch_${id}_cartButton`);
+        buttonId.innerText = "Add To Cart";
+        buttonId.classList.remove("disabled");
+      });
       this.$emit("delete-selected-data", this.selected);
+      console.log(this.selected);
       this.selected = [];
       this.possibleCartItems = [];
     },
