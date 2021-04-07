@@ -25,7 +25,12 @@
       </b-collapse>
     </b-navbar>
     <!-- Cart Modal -->
-    <Cart ref="modalComponent" />
+    <Cart
+      :cartData="getCartData"
+      @delete-selected-data="delItemsFromCart"
+      @clear-on-ok="clearAllData"
+      ref="modalComponent"
+    />
   </div>
 </template>
 
@@ -35,9 +40,27 @@ export default {
   components: {
     Cart,
   },
+  props: {
+    getCartData: Array,
+  },
   methods: {
     showCart() {
       this.$refs.modalComponent.show();
+    },
+    delItemsFromCart(cartDataToRem) {
+      this.$emit("remove-from-cart", cartDataToRem);
+    },
+    delAllData(emptyData) {
+      this.emit("clear-all-data", emptyData);
+    },
+  },
+  computed: {
+    totalNumberOfItems() {
+      let totalQty = 0;
+      this.getCartData.forEach((item) => {
+        totalQty += item.quantity;
+      });
+      return totalQty;
     },
   },
 };

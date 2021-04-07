@@ -7,7 +7,7 @@
       "productPrice": 640,
       "productStock": 50,
       "quantityOrdered": 0,
-      "isAddedToCart": true
+      "isAddedToCart": false
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "productPrice": 365,
       "productStock": 10,
       "quantityOrdered": 0,
-      "isAddedToCart": true
+      "isAddedToCart": false
     },
     {
       "id": 3,
@@ -70,7 +70,7 @@
       "productPrice": 182,
       "productStock": 40,
       "quantityOrdered": 0,
-      "isAddedToCart": true
+      "isAddedToCart": false
     }
   ],
   "cart": [
@@ -82,6 +82,29 @@
       "productStock": 39,
       "quantityOrdered": 1,
       "isAddedToCart": false
+    },
+    {
+      "id": 1,
+      "productName": "Big Boi Black",
+      "productImage": "watch1.png",
+      "productPrice": 640,
+      "productStock": 49,
+      "quantityOrdered": 1,
+      "isAddedToCart": false
+    },
+    {
+      "id": 2,
+      "productName": "Bold Gold",
+      "productImage": "watch2.png",
+      "productPrice": 365,
+      "isAddedToCart": true
+    },
+    {
+      "id": 3,
+      "productName": "Sweater Leather",
+      "productImage": "watch3.png",
+      "productPrice": 730,
+      "isAddedToCart": true
     }
   ],
   "orderDetails": {
