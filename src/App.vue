@@ -1,11 +1,7 @@
 <template>
   <div id="app" class="position-relative">
-    <Navbar
-      :getCartData="cart"
-      @remove-from-cart="delFromCart"
-      @clear-all-data="delAllFromCart"
-    />
-    <router-view @send-cart-data="addToCart" />
+    <Navbar :getCartData="cart" @remove-from-cart="delFromCart" />
+    <router-view @send-cart-data="addToCart" :getCartData="cart" />
     <Footer />
   </div>
 </template>
@@ -62,9 +58,6 @@ export default {
         const idx = this.cart.findIndex((item) => item.id === id);
         this.cart.splice(idx, 1);
       });
-    },
-    delAllFromCart(delAllPayload) {
-      this.cart = delAllPayload;
     },
   },
 };

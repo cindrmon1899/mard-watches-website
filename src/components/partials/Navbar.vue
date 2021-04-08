@@ -30,7 +30,6 @@
     <Cart
       :cartData="getCartData"
       @delete-selected-data="delItemsFromCart"
-      @clear-on-ok="clearAllData"
       ref="modalComponent"
     />
   </div>
@@ -53,7 +52,7 @@ export default {
       this.$emit("remove-from-cart", cartDataToRem);
     },
     delAllData(emptyData) {
-      this.emit("clear-all-data", emptyData);
+      this.$emit("clear-all-data", emptyData);
     },
   },
   computed: {

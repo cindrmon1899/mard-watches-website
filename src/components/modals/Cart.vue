@@ -1,5 +1,7 @@
 <template>
   <b-modal id="cart" ref="cartModal" title="Cart" size="lg" @ok="handleOk">
+    <template #modal-ok> Checkout </template>
+    <template #modal-cancel> Close </template>
     <b-container fluid>
       <!-- Title -->
       <b-row>
@@ -134,14 +136,7 @@ export default {
     },
     handleOk() {
       if (this.cartData.length > 0) {
-        alert(
-          "Submitted final order: " +
-            JSON.stringify(this.cartData) +
-            "\nTotal Amount: " +
-            this.totalAmount
-        );
-        this.$emit("clear-on-ok", []);
-        this.$router.push("/");
+        this.$router.push("/submit");
       } else {
         return;
       }
