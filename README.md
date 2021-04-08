@@ -1,6 +1,10 @@
 # Mard Watches Store
 > Final Output (Machine Problem 13)
 
+Check out the deployed site [here](https://mard-watches-prototype.sandbox.cindrmon.blue/#/)
+
+Deployed through Netlify: [![Netlify Status](https://api.netlify.com/api/v1/badges/a7308a93-0fa1-4362-859c-a2c94bf48489/deploy-status)](https://app.netlify.com/sites/mard-watches-web-prototype/deploys)
+
 ## Requirements:
 1. Node.js
 2. vue cli
