@@ -8,6 +8,7 @@
     <router-view
       @send-cart-data="addToCart"
       @clear-data="resetCart"
+      @reset-buttons="resetButtons"
       :getCatalogueData="catalogue"
       :getCartData="cart"
     />
@@ -128,6 +129,11 @@ export default {
     },
     resetCart(emptyData) {
       this.cart = emptyData;
+    },
+    resetButtons() {
+      this.catalogue.map((item) => {
+        item.isAddedToCart = false;
+      });
     },
   },
 };

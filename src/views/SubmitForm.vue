@@ -133,6 +133,7 @@ export default {
       );
       this.customerDetailsPayload = {};
       this.$emit("clear-data", []);
+      this.$emit("reset-buttons");
       this.$router.push("/");
     },
   },
