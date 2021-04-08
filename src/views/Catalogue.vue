@@ -59,8 +59,8 @@ export default {
       let selectedItem = {
         id: item.id,
         name: item.productName,
-        price: item.productPrice,
         quantity: 1,
+        price: item.productPrice,
       };
       item.isAddedToCart = true;
       this.$emit("send-cart-data", selectedItem);
