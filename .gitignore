@@ -24,3 +24,6 @@ pnpm-debug.log*
 
 # When exporting raw data to send for submission
 *.zip
+
+# any local scripts
+*.sh
