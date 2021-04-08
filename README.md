@@ -1,4 +1,4 @@
-# Mard Watches Store
+# Mard Watches Store Prototype (Just frontend only)
 > Final Output (Machine Problem 13)
 
 Check out the deployed site [here](https://mard-watches-prototype.sandbox.cindrmon.blue/#/)
