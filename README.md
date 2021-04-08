@@ -1,8 +1,6 @@
 # Mard Watches Store
 > Final Output (Machine Problem 13)
 
-# STILL WORK IN PROGRESS! Will update main branch if it is done
-
 ## Requirements:
 1. Node.js
 2. vue cli
@@ -62,7 +60,7 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve // already runs the vue app and the fake json-server api simultaneously, so just type this command.
+npm run serve
 ```
 
 ### Compiles and minifies for production
