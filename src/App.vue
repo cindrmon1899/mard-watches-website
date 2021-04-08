@@ -1,7 +1,15 @@
 <template>
   <div id="app" class="position-relative">
-    <Navbar :getCartData="cart" @remove-from-cart="delFromCart" />
-    <router-view @send-cart-data="addToCart" :getCartData="cart" />
+    <Navbar
+      :getCartData="cart"
+      :getCatalogueData="catalogue"
+      @remove-from-cart="delFromCart"
+    />
+    <router-view
+      @send-cart-data="addToCart"
+      :getCatalogueData="catalogue"
+      :getCartData="cart"
+    />
     <Footer />
   </div>
 </template>
@@ -22,6 +30,64 @@ export default {
   data() {
     return {
       cart: [],
+      catalogue: [
+        {
+          id: 1,
+          productName: "Big Boi Black",
+          productImage: "watch1.png",
+          productPrice: 640,
+          isAddedToCart: false,
+        },
+        {
+          id: 2,
+          productName: "Bold Gold",
+          productImage: "watch2.png",
+          productPrice: 365,
+          isAddedToCart: false,
+        },
+        {
+          id: 3,
+          productName: "Sweater Leather",
+          productImage: "watch3.png",
+          productPrice: 730,
+          isAddedToCart: false,
+        },
+        {
+          id: 4,
+          productName: "Blue Pop",
+          productImage: "watch4.png",
+          productPrice: 450,
+          isAddedToCart: false,
+        },
+        {
+          id: 5,
+          productName: "Bold Gold Black",
+          productImage: "watch5.png",
+          productPrice: 1005,
+          isAddedToCart: false,
+        },
+        {
+          id: 6,
+          productName: "Movement, but not really",
+          productImage: "watch6.png",
+          productPrice: 274,
+          isAddedToCart: false,
+        },
+        {
+          id: 7,
+          productName: "Eat the Rich",
+          productImage: "watch7.png",
+          productPrice: 1370,
+          isAddedToCart: false,
+        },
+        {
+          id: 8,
+          productName: "U Basic",
+          productImage: "watch8.png",
+          productPrice: 182,
+          isAddedToCart: false,
+        },
+      ],
     };
   },
   methods: {

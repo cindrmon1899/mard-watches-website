@@ -1,5 +1,12 @@
 <template>
-  <b-modal id="cart" ref="cartModal" title="Cart" size="lg" @ok="handleOk">
+  <b-modal
+    id="cart"
+    ref="cartModal"
+    title="Cart"
+    size="lg"
+    @ok="handleOk"
+    :ok-disabled="disableOk"
+  >
     <template #modal-ok> Checkout </template>
     <template #modal-cancel> Close </template>
     <b-container fluid>
@@ -79,7 +86,9 @@
           <b-col cols="2">Total Cost: </b-col>
           <b-col cols="2">XRP {{ totalAmount }}</b-col>
         </b-row>
-        <!-- <div> For Debugging Purposes
+        <!-- <div>
+          For Debugging Purposes
+          <p>Possible Cart Items: {{ possibleCartItems }}</p>
           <p>Selected: {{ selected }}</p>
           <p>All Selected: {{ allSelected }}</p>
           <p>Indeterminate: {{ indeterminate }}</p>
@@ -101,11 +110,12 @@ export default {
   },
   props: {
     cartData: Array,
+    catalogueData: Array,
   },
   methods: {
     show() {
       this.$refs.cartModal.show();
-      // Initialise all available movies
+      // initialise all instances
       for (var i = 0; i < this.cartData.length; i++) {
         this.possibleCartItems.push(this.cartData[i].id);
       }
@@ -128,11 +138,18 @@ export default {
         let buttonId = eval(`watch_${id}_cartButton`);
         buttonId.innerText = "Add To Cart";
         buttonId.classList.remove("disabled");
+        this.catalogueData.forEach((product) => {
+          if (product.id == id) {
+            product.isAddedToCart = false;
+          }
+        });
+        this.possibleCartItems = this.possibleCartItems.filter(
+          (itemID) => itemID != id
+        );
       });
       this.$emit("delete-selected-data", this.selected);
       console.log(this.selected);
       this.selected = [];
-      this.possibleCartItems = [];
     },
     handleOk() {
       if (this.cartData.length > 0) {
@@ -163,6 +180,13 @@ export default {
         qtyCost += this.cartData[i].quantity * this.cartData[i].price;
       }
       return qtyCost;
+    },
+    disableOk() {
+      if (this.cartData.length == 0) {
+        return true;
+      } else {
+        return false;
+      }
     },
   },
 };

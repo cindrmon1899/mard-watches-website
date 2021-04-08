@@ -29,6 +29,7 @@
     <!-- Cart Modal -->
     <Cart
       :cartData="getCartData"
+      :catalogueData="getCatalogueData"
       @delete-selected-data="delItemsFromCart"
       ref="modalComponent"
     />
@@ -43,6 +44,7 @@ export default {
   },
   props: {
     getCartData: Array,
+    getCatalogueData: Array,
   },
   methods: {
     showCart() {
