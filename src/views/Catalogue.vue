@@ -30,8 +30,10 @@
               :id="`watch_${product.id}_cartButton`"
               @click="addItemToCart(product)"
               :disabled="product.isAddedToCart"
-              >Add to Cart</b-button
             >
+              <span v-show="!product.isAddedToCart">Add To Cart</span>
+              <span v-show="product.isAddedToCart">Added</span>
+            </b-button>
           </b-card-footer>
         </b-card>
       </b-col>
@@ -55,18 +57,15 @@ export default {
     getCatalogueData: Array,
   },
   methods: {
-    async addItemToCart(item) {
+    addItemToCart(item) {
+      item.isAddedToCart = true;
       let selectedItem = {
         id: item.id,
         name: item.productName,
         quantity: 1,
         price: item.productPrice,
       };
-      item.isAddedToCart = true;
       this.$emit("send-cart-data", selectedItem);
-      let buttonId = eval(`watch_${item.id}_cartButton`);
-      buttonId.innerText = "Added";
-      buttonId.classList.add("disabled");
     },
   },
 };

@@ -135,9 +135,6 @@ export default {
     },
     deleteSelectedData() {
       this.selected.forEach((id) => {
-        let buttonId = eval(`watch_${id}_cartButton`);
-        buttonId.innerText = "Add To Cart";
-        buttonId.classList.remove("disabled");
         this.catalogueData.forEach((product) => {
           if (product.id == id) {
             product.isAddedToCart = false;

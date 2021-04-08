@@ -7,6 +7,7 @@
     />
     <router-view
       @send-cart-data="addToCart"
+      @clear-data="resetCart"
       :getCatalogueData="catalogue"
       :getCartData="cart"
     />
@@ -124,6 +125,9 @@ export default {
         const idx = this.cart.findIndex((item) => item.id === id);
         this.cart.splice(idx, 1);
       });
+    },
+    resetCart(emptyData) {
+      this.cart = emptyData;
     },
   },
 };
