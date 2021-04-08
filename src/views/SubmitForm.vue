@@ -132,8 +132,7 @@ export default {
           JSON.stringify(customerDetailsPayload)
       );
       this.customerDetailsPayload = {};
-      this.$emit("clear-data", []);
-      this.$emit("reset-buttons");
+      this.$emit("clear-cart");
       this.$router.push("/");
     },
   },
