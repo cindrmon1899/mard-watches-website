@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deployToMain": "./readyToPush.sh"
+    "deployToGithub": "./readyToPush.sh",
+    "deployToGitea": "./readyToPush_gitea.sh"
   },
   "dependencies": {
     "bootstrap-vue": "^2.21.2",
